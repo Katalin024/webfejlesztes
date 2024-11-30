@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dolt {
+    font-style: italic;
+}
+
+.arnyek {
+    text-shadow: 2px 1px 1px rgba(72, 28, 172, 0.9);
+}
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #023e8a;
+}
+
+nav ul {
+    list-style: none;
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(72, 28, 172, 0.9);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #005f99;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tudtade {
+    display: flex;
+    flex-direction: column;
+}
+
+.fotok {
+    margin-bottom: 15%;
+}
+
+.side-info {
+    order: -1;
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+.side-info ul {
+    padding: 0;
+    margin: 0;
+}
+
+.side-info ul li {
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+.main-content {
+    order: -2;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.kep img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.kiallitaskep img {
+    display: none;
+}
+
+.kiallitasszoveg {
+    order: -1;
+}
+
+form {
+    background-color: #f1f1f1;
+}
+
+.urlap {
+    text-align: center;
+}
+
+.kviz {
+    text-align: left;
+}
+
+.urlap {
+    display: block;
+    text-align: center;
+    order: -2;
+}
+
+.foszoveg {
+    margin-top: 0%;
+    order: -3;
+    text-align: left;
+}
+
+.erdekessegek {
+    font-style: italic;
+    background-color: #ffcc00;
+    margin: 3% 1%;
+    padding: 2%;
+    border-radius: 3%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    text-shadow: 3px 3px 1px rgba(72, 28, 172, 0.9);
+    padding: 10px;
+    background-color: #023e8a;
+    color: white;
+}
+
+@media all and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0;
+        flex-basis: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        order: -1;
+        flex-basis: 58%;
+        margin-left: 3%;
+    }
+
+    .tudtade {
+        margin: 2%;
+        flex-basis: 46%;
+    }
+
+    .kiallitasszoveg {
+        flex-basis: 93%;
+        margin: 0 3%;
+    }
+
+    .fotok {
+        margin-bottom: 10%;
+    }
+
+    .kiallitaskep img {
+        display: block;
+        width: 98%;
+        height: auto;
+        margin: 2%;
+        border-radius: 3%;
+    }
+
+    .side-info {
+        order: -3;
+        flex-basis: 24%;
+    }
+
+    .foszoveg {
+        order: -2;
+        flex-basis: 59%;
+        margin-left: 3%;
+        margin-right: 1%;
+    }
+
+    .urlap {
+        flex-basis: 70%;
+        margin: auto;
+    }
+
+    .kep {
+        flex-basis: 95%;
+    }
+
+    .kep img {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 2%;
+        height: auto;
+    }
+}
+
+@media all and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0;
+        flex-basis: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .main-content {
+        flex-basis: 60%;
+    }
+
+    .kiallitaskep img {
+        display: block;
+        width: 98%;
+        height: auto;
+        margin: 2%;
+    }
+
+    .tudtade {
+        flex-basis: 20%;
+        margin: 0%;
+
+    }
+
+    .erdekessegek {
+        width: 100%;
+    }
+
+    .kiallitasszoveg {
+        order: 0;
+        flex-basis: 55%;
+        margin: 0 3%;
+    }
+
+    .fotok {
+        margin-bottom: 5%;
+    }
+
+    .side-info {
+        flex-basis: 22%;
+    }
+
+    .foszoveg {
+        flex-basis: 45%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .urlap {
+        flex-basis: 30%;
+    }
+
+    .kep {
+        flex-basis: 28%;
+    }
+
+    .kep img {
+        height: auto;
+    }
+
+}

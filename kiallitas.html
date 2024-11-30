@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gyakorlási célból készült Vízi Misztikum Múzeuma nevű kitalált múzeum weboldalának kiállításait bemutató oldala.">
+    <meta name="author" content="Juhász Katalin">
+    <meta name="copyright" content="csak tanulási célokra">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon/ikon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Vízi Misztikum Múzeuma</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="arnyek">Vízi Misztikum Múzeuma</h1>
+        <p class="arnyek dolt">Fedezd fel a víz rejtélyeit Budapesten!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="fooldal.html">Főoldal</a></li>
+            <li><a href="#" class="active">Kiállításaink</a></li>
+            <li><a href="idopont.html">Időpontfoglalás</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="tudtade">
+            <div class="erdekessegek">
+                <h3>Tudtad-e?</h3>
+                <p>A tengeri teknősök rendkívüli navigációs képességekkel rendelkeznek, amelyek lehetővé teszik
+                    számukra, hogy több ezer kilométert is megtegyenek, hogy visszatérjenek arra a partszakaszra, ahol
+                    kikeltettek. Ez a vándorlás évről évre ismétlődik, miközben a teknősök pontosan megtalálják
+                    szülőhelyüket, hogy tojásaikat ott rakják le.</p>
+            </div>
+            <div class="kiallitaskep">
+                <img src="kepek/tteknos.jpg" alt="Tengeri teknős">
+            </div>
+            <div class="erdekessegek">
+                <h3>Tudtad-e?</h3>
+                <p> A csikóhalak hímjei azok, akik kihordják a kicsinyeiket. A nőstények a petéket a hímek hasán
+                    található tasakba rakják, ahol azok kikelnek, és végül a hím szabadon engedi az apró csikóhalakat a
+                    vízbe.</p>
+            </div>
+            <div class="kiallitaskep">
+                <img src="kepek/csikohal.jpg" alt="Csikóhal">
+            </div>
+        </div>
+        <div class="kiallitasszoveg">
+            <h2>A titokzatos tengervilág mélységei</h2>
+            <p>Fő kiállításunk egy lebilincselő utazásra invitál a tengerek és óceánok varázslatos világába. A
+                kiállítótér különleges installációkkal és interaktív elemekkel vezeti végig a látogatókat a
+                korallzátonyok vibráló életétől egészen a mélytengeri árok titokzatos sötétségéig. A tengeri élőlények
+                sokszínűsége és a víz ereje egyszerre hívja fel a figyelmet a természet szépségére és a megóvás
+                fontosságára.</p>
+
+            <p>A kiállításon találkozhatnak bohóchalakkal, akik korallok között bújócskáznak, és megcsodálhatják az
+                elektromos angolnák lenyűgöző képességeit. A mélytenger sötét birodalmában olyan különleges lényeket
+                ismerhetnek meg, mint a táncos medúza vagy az ördöghal, amely lámpásszerű fényével ejti rabul
+                zsákmányát. A látványos akváriumok és bemutatók mellett a kiállítás számos információs pontot is kínál,
+                ahol részletesen megismerheti a tengerek életének rejtelmeit.</p>
+
+            <p>A kiállítást szabadon, saját tempóban is felfedezheti, de lehetőség van csatlakozni
+                tárlatvezetéseinkhez, amelyek még több érdekességet tárnak fel. Szakértőink nemcsak elkalauzolják Önt a
+                mélységek lenyűgöző történeteiben, hanem olyan apró titkokat is megosztanak, amelyeket önállóan talán
+                nem venne észre. A tárlatvezetés az egész kiállításon végigvezet, és kérdéseire is szívesen válaszolnak.
+            </p>
+
+            <h2>Gyerekprogramok: A tengeri világ játékos felfedezése</h2>
+            <p>A legkisebbek számára rendszeresen szervezünk időszakos programokat, ahol játékos módon fedezhetik fel a
+                tengeri élővilágot. Megtanulhatják például, hogyan mozognak a tengeri csillagok, miért változtat színt a
+                tintahal, és hogyan „kúsznak” előre a tengeri csikók.</p>
+
+            <p>A kézműves foglalkozások keretében saját tengeri világot készíthetnek papírból és újrahasznosított
+                anyagokból, miközben játékos feladatok segítségével ismerkedhetnek a tengeri élőlények formáival és
+                szokásaival. A bálnaének-imitációs játék és a „kincskeresés” különösen népszerű a gyerekek körében, ahol
+                apró tengeri témájú ajándékokat is nyerhetnek.</p>
+
+            <p class="dolt">Látogasson el múzeumunkba, és merüljön el a víz alatti világ rejtelmeiben – akár egyedül,
+                akár tárlatvezetéssel, garantáltan felejthetetlen élményben lesz része!</p>
+            <div class="kviz">
+                <h2>Tengeri Élővilág Kvíz</h2>
+
+                <form id="kvizurlap" method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+                    <div class="kerdes">
+                        <h3>1. Melyik tengeri állat képes "énekelni"?</h3>
+                        <label><input type="radio" name="k1" id="delfin"> a) Delfin</label><br>
+                        <label><input type="radio" name="k1" id="balna"> b) Bálna</label><br>
+                        <label><input type="radio" name="k1" id="foka"> c) Fóka</label><br>
+                    </div>
+
+                    <div class="kerdes">
+                        <h3>2. Melyik tengeri állat képes megváltoztatni a színét az álcázás érdekében?</h3>
+                        <label><input type="radio" name="k2" id="csillag"> a) Tengeri csillag</label><br>
+                        <label><input type="radio" name="k2" id="polip"> b) Polip</label><br>
+                        <label><input type="radio" name="k2" id="kamhal"> c) Kaméleonhal</label><br>
+                    </div>
+
+                    <div class="kerdes">
+                        <h3>3. Hány szívvel rendelkezik a polip?</h3>
+                        <label><input type="radio" name="k3" id="egy"> a) Egy</label><br>
+                        <label><input type="radio" name="k3" id="ketto"> b) Kettő</label><br>
+                        <label><input type="radio" name="k3" id="harom"> c) Három</label><br>
+                    </div>
+
+                    <div class="kerdes">
+                        <h3>4. Mennyi ideig élhet egy zöld tengeri teknős?</h3>
+                        <label><input type="radio" name="k4" id="a"> a) 20 év</label><br>
+                        <label><input type="radio" name="k4" id="b"> b) 50-70 év</label><br>
+                        <label><input type="radio" name="k4" id="c"> c) 5 év</label><br>
+                    </div>
+
+                    <div class="kerdes">
+                        <h3>5. Mit eszik a kék bálna? (Több válasz lehetséges)</h3>
+                        <label><input type="checkbox" name="k5" id="krill"> a) Krill</label><br>
+                        <label><input type="checkbox" name="k5" id="plankton"> b) Plankton</label><br>
+                        <label><input type="checkbox" name="k5" id="hal"> c) Hal</label><br>
+                        <label><input type="checkbox" name="k5" id="tcsillag"> d) Tengeri csillag</label><br>
+                    </div>
+
+                    <div class="kerdes">
+                        <h3>6. A cápák állandóan mozgásban kell legyenek, hogy lélegezni tudjanak.</h3>
+                        <label><input type="radio" name="k6" id="igen"> Igaz</label><br>
+                        <label><input type="radio" name="k6" id="nem"> Hamis</label>
+                    </div><br>
+
+                    &nbsp; <input type="submit" value="Elküldés" id="kvizgomb" name="kuldes">
+                    <input type="reset" value="Törlés" name="torol">
+                </form>
+                <p id="kiertekel"></p>
+            </div>
+        </div>
+
+        <div class="tudtade">
+            <div class="kiallitaskep">
+                <img src="kepek/meduza.jpg" alt="Medúzák">
+            </div>
+            <div class="erdekessegek">
+                <h3>Tudtad-e?</h3>
+                <p>A medúzák az egyik legrégebbi élőlények a Földön. Több mint 500 millió éve léteznek, és némelyikük
+                    szinte halhatatlan, mivel képes visszaalakulni egy fiatalabb állapotába, megújítva életciklusát.</p>
+            </div>
+            <div class="kiallitaskep">
+                <img src="kepek/bohochal.jpg" alt="Bohóchal">
+            </div>
+            <div class="erdekessegek">
+                <h3>Tudtad-e?</h3>
+                <p>A bohóchalak mind születésükkor hímneműek, de ha a csoport domináns nősténye elpusztul, a legerősebb
+                    hím átalakul nősténnyé, hogy átvegye a helyét a hierarchiában. Ez a lenyűgöző nemváltás biztosítja a
+                    populáció fennmaradását.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2024 Vízi Misztikum Múzeuma - az oldal nem reprezentál valós vállalatot, kizárólag gyakorlásra szolgál
+    </footer>
+
+    <script src="kviz.js"></script>
+</body>
+
+</html>

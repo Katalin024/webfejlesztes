@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gyakorlási célból készült Vízi Misztikum Múzeuma nevű kitalált múzeum weboldalának időpontfoglalás oldala.">
+    <meta name="author" content="Juhász Katalin">
+    <meta name="copyright" content="csak tanulási célokra">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon/ikon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Vízi Misztikum Múzeuma</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="arnyek">Vízi Misztikum Múzeuma</h1>
+        <p class="arnyek dolt">Fedezd fel a víz rejtélyeit Budapesten!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="fooldal.html">Főoldal</a></li>
+            <li><a href="kiallitas.html">Kiállításaink</a></li>
+            <li><a href="#" class="active">Időpontfoglalás</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="side-info">
+            <h2 class="dolt">Általános információk</h2>
+            <p><strong>Nyitvatartás:</strong> Hétfőtől vasárnapig, 10:00–19:00</p>
+            <h4 class="dolt">Jegyárak</h4>
+            <ul>
+                <li><strong>Felnőtt:</strong> 3.000 Ft</li>
+                <li><strong>Diák/Nyugdíjas:</strong> 2.000 Ft</li>
+                <li><strong>Gyermek (6 éves korig):</strong> Ingyenes</li>
+                <li><strong>Csoport (10 fő felett):</strong> 10%-os kedvezménnyel</li>
+            </ul>
+            <h4 class="dolt">Elérhetőségeink</h4>
+            <p><strong>Cím:</strong> Budapest, Vízivarázs utca 1.</p>
+            <p><strong>E-mail cím:</strong> info@vizimisztikum.hu</p>
+            <p><strong>Telefonszám:</strong> +363012345678</p>
+        </div>
+
+        <div class="foszoveg">
+            <h2>Fontos tudnivalók</h2>
+            <p>Magyar nyelvű tárlatvezetéseink az alábbi időpontokban indulnak: 10:00, 12:00, 14:00, 16:00.<br>
+                Nagyobb létszámú csoportok vagy egyedi igények esetén lehetőség van más időpontok egyeztetésére is. Ezen
+                igényét kérjük, legalább egy héttel korábban jelezze telefonon vagy e-mailben.<br>
+                A tárlatvezetéseken való részvételhez ajánlott előre foglalni, mivel a létszám korlátozott (max. 30 fő).
+                Előzetes foglalás nélkül érkező látogatók számára a szabad helyek elérhetősége nem garantált.</p>
+
+            <h3>Csoport esetén</h3>
+            <p>10 főnél nagyobb létszámú csoportok számára az időpontfoglalás kizárólag telefonon lehetséges.
+                Kérjük, hívja ügyfélszolgálatunkat nyitvatartási időben a +36 30 123 4567-es telefonszámon!<br>
+                Javasoljuk, hogy időben foglaljanak, hogy biztosítani tudjuk a kívánt időpontot és a megfelelő
+                tárlatvezetést.</p>
+
+            <p class="dolt">Ha bármi kérdése van a foglalással vagy a látogatással kapcsolatban, forduljon hozzánk
+                bizalommal!</p>
+        </div>
+
+        <div class="urlap">
+            <h3>Kérjük, töltse ki az alábbi űrlapot az időpontfoglaláshoz!</h3>
+            <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+                <p><label>Teljes név:<br><input type="text" name="nev" size="37"></label></p>
+                <p><label>E-mail cím:<br><input type="email" name="emailcim" size="37"></label></p>
+                <p><label>Telefonszám:<br><input type="tel" name="telszam" size="37" value="+36 30"></label></p>
+                <p><label>Válassza ki a napot és időpontot! <br><input type="date" name="foglaltnap"></label>
+                    <label> <input type="text" list="ido" name="ido" autofocus>
+                        <datalist id="ido">
+                            <option value="10:00">
+                            <option value="12:00">
+                            <option value="14:00">
+                            <option value="16:00">
+                        </datalist> </label>
+                <p><label>6 évnél idősebb személy(ek): <input type="number" min="1" max="10" step="1" name="fo"
+                            value="1"> fő</label></p>
+                <p><label>Egyéb megjegyzés:<br><textarea name="megjegyzes" rows="5" cols="37"></textarea></label></p>
+                <p><label>Tárlatvezetésen részt veszek: <input type="checkbox" name="csoport"></label></p>
+                <input type="submit" value="Elküldés" name="kuld">
+                <input type="reset" value="Törlés" name="torol">
+            </form>
+            <p class="dolt">A foglalás megerősítésekor egy automatikus visszaigazolást küldünk az Ön által megadott
+                e-mail címre.<br> Szeretettel várjuk Önt!</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Vízi Misztikum Múzeuma - az oldal nem reprezentál valós vállalatot, kizárólag gyakorlásra szolgál
+    </footer>
+
+</body>
+
+</html>
