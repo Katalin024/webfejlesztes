@@ -9,4 +9,4 @@ Az általam írt JS kód a kiállítások menüpontban található, célja a kv�
 
 A teljes weboldalon a "Lora" nevű google webfontot használtam minden szövegre.
 
-Az oldaloamon található képek a https://unsplash.com/ szabadon felhasználható képeket tartalmazó oldalról származnak, David Clode, Taylor Boivin, Christian Bisbo Johnsen, Liona Toussaint és Pexels Marcusl munkái.
+Az oldalamon található képek a https://unsplash.com/ szabadon felhasználható képeket tartalmazó oldalról származnak, David Clode, Taylor Boivin, Christian Bisbo Johnsen, Liona Toussaint és Pexels Marcusl munkái.
