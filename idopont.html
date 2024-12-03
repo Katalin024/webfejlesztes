@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="jquery/jquery-3.7.1.js"></script>
+    <script src="jquery/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Gyakorlási célból készült Vízi Misztikum Múzeuma nevű kitalált múzeum weboldalának időpontfoglalás oldala.">
@@ -13,6 +15,54 @@
     <link rel="icon" href="favicon/ikon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Vízi Misztikum Múzeuma</title>
+    <script>
+        $(document).ready(function () {
+            $("#foglalasurlap").validate({
+                rules: {
+                    nev: {
+                        required: true,
+                        minlength: 4
+                    },
+                    emailcim: {
+                        required: true,
+                        email: true,
+                        minlength: 4
+                    },
+                    telszam: {
+                        required: true,
+                        minlength: 12,
+                        number: true
+                    },
+                    foglaltnap: "required",
+                    ido: "required",
+                    megjegyzes: {
+                        maxlength: 200
+                    }
+                },
+                messages: {
+                    nev: "<br>Add meg a teljes nevedet!",
+                    emailcim: {
+                        required: "<br>Add meg az email címedet!",
+                        email: "<br>Valós email címet adj meg!",
+                        minlength: "<br>Valós email címet adj meg!",
+                    },
+                    telszam: {
+                        minlength: "<br>Add meg a telefonszámodat!",
+                        required: "<br>Add meg a telefonszámod!",
+                        number: "<br>Csak számokat írj be, szóközök nélkül!"
+                    },
+                    foglaltnap: "<br>Válaszd ki a foglalás napját!<br>",
+                    ido: "<br>Válassz az időpontok közül!",
+                    megjegyzes: "<br>A megjegyzés legfeljebb 200 karakter hosszú lehet!",
+                },
+            });
+        });
+    </script>
+    <style>
+        label.error {
+            color: #FB3A3A;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,14 +99,14 @@
         </div>
 
         <div class="foszoveg">
-            <h2>Fontos tudnivalók</h2>
+            <h1 class="dolt">Fontos tudnivalók</h1>
             <p>Magyar nyelvű tárlatvezetéseink az alábbi időpontokban indulnak: 10:00, 12:00, 14:00, 16:00.<br>
                 Nagyobb létszámú csoportok vagy egyedi igények esetén lehetőség van más időpontok egyeztetésére is. Ezen
                 igényét kérjük, legalább egy héttel korábban jelezze telefonon vagy e-mailben.<br>
                 A tárlatvezetéseken való részvételhez ajánlott előre foglalni, mivel a létszám korlátozott (max. 30 fő).
                 Előzetes foglalás nélkül érkező látogatók számára a szabad helyek elérhetősége nem garantált.</p>
 
-            <h3>Csoport esetén</h3>
+            <h2 class="dolt">Csoport esetén</h2>
             <p>10 főnél nagyobb létszámú csoportok számára az időpontfoglalás kizárólag telefonon lehetséges.
                 Kérjük, hívja ügyfélszolgálatunkat nyitvatartási időben a +36 30 123 4567-es telefonszámon!<br>
                 Javasoljuk, hogy időben foglaljanak, hogy biztosítani tudjuk a kívánt időpontot és a megfelelő
@@ -67,28 +117,51 @@
         </div>
 
         <div class="urlap">
-            <h3>Kérjük, töltse ki az alábbi űrlapot az időpontfoglaláshoz!</h3>
-            <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
-                <p><label>Teljes név:<br><input type="text" name="nev" size="37"></label></p>
-                <p><label>E-mail cím:<br><input type="email" name="emailcim" size="37"></label></p>
-                <p><label>Telefonszám:<br><input type="tel" name="telszam" size="37" value="+36 30"></label></p>
-                <p><label>Válassza ki a napot és időpontot! <br><input type="date" name="foglaltnap"></label>
-                    <label> <input type="text" list="ido" name="ido" autofocus>
-                        <datalist id="ido">
-                            <option value="10:00">
-                            <option value="12:00">
-                            <option value="14:00">
-                            <option value="16:00">
-                        </datalist> </label>
-                <p><label>6 évnél idősebb személy(ek): <input type="number" min="1" max="10" step="1" name="fo"
-                            value="1"> fő</label></p>
-                <p><label>Egyéb megjegyzés:<br><textarea name="megjegyzes" rows="5" cols="37"></textarea></label></p>
-                <p><label>Tárlatvezetésen részt veszek: <input type="checkbox" name="csoport"></label></p>
-                <input type="submit" value="Elküldés" name="kuld">
-                <input type="reset" value="Törlés" name="torol">
+            <h2 class="dolt">Kérjük, töltse ki az alábbi űrlapot az időpontfoglaláshoz!</h2>
+            <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="foglalasurlap"
+                novalidate>
+                <p>
+                    <label for="nev">Teljes név:</label><br>
+                    <input type="text" name="nev" id="nev" size="37">
+                </p>
+                <p>
+                    <label for="emailcim">E-mail cím:</label><br>
+                    <input type="email" name="emailcim" id="emailcim" size="37">
+                </p>
+                <p>
+                    <label for="telszam">Telefonszám:</label><br>
+                    <input type="tel" name="telszam" id="telszam" size="37" value="06">
+                </p>
+                <p>
+                    <label for="foglaltnap">Válassza ki a napot és időpontot!</label><br>
+                    <input type="date" name="foglaltnap" id="foglaltnap">
+                    <input type="text" list="ido" name="ido" id="idopont">
+                    <datalist id="ido">
+                        <option value="10:00">
+                        <option value="12:00">
+                        <option value="14:00">
+                        <option value="16:00">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="fo">6 évnél idősebb személy(ek):</label>
+                    <input type="number" min="1" max="10" step="1" name="fo" id="fo" value="1"> fő
+                </p>
+                <p>
+                    <label for="megjegyzes">Egyéb megjegyzés:</label><br>
+                    <textarea name="megjegyzes" id="megjegyzes" rows="5" cols="37"></textarea>
+                </p>
+                <p>
+                    <label for="tarlatvezetes">Tárlatvezetésen részt veszek:</label>
+                    <input type="checkbox" name="tarlatvezetes" id="tarlatvezetes">
+                </p>
+                <p>
+                    <input type="submit" value="Elküldés" name="kuld">
+                    <input type="reset" value="Törlés" name="torol">
+                </p>
             </form>
             <p class="dolt">A foglalás megerősítésekor egy automatikus visszaigazolást küldünk az Ön által megadott
-                e-mail címre.<br> Szeretettel várjuk Önt!</p>
+                e-mail címre. Szeretettel várjuk Önt!</p>
         </div>
     </main>
 

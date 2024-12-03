@@ -77,7 +77,7 @@ function pontoz() {
     } else if (pont >= 1) {
         uzenet = `Ügyes vagy, ${pont} kérdésre helyesen tudtad a választ! Látogass el múzeumunkba, és fedezd fel a tengeri élővilág izgalmas titkait – garantáltan lenyűgöző élmények és új ismeretek várnak rád!`;
     } else {
-        uzenet = `Semmi gond, a tenger tele van meglepetésekkel! Látogass el múzeumunkba, és merülj el a vízi világ varázslatos rejtelmeiben. Garantáljuk, hogy nálunk rengeteg izgalmas dolgot tanulhatsz!`;
+        uzenet = `Ez most nem sikerült, de semmi gond, a tenger tele van meglepetésekkel! Látogass el múzeumunkba, és merülj el a vízi világ varázslatos rejtelmeiben. Garantáljuk, hogy nálunk rengeteg izgalmas dolgot tanulhatsz!`;
     }
 
     document.getElementById("kiertekel").innerText = uzenet;
